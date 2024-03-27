@@ -44,11 +44,15 @@ export const useAppStore = defineStore(SetupStoreId.App, () => {
     setReloadFlag(true);
   }
 
-  const locale = ref<App.I18n.LangType>(localStg.get('lang') || 'zh-CN');
+  const locale = ref<App.I18n.LangType>(localStg.get('lang') || 'en-US');
 
   const localeOptions: App.I18n.LangOption[] = [
     {
-      label: '中文',
+      label: '繁體中文',
+      key: 'zh-TW'
+    },
+    {
+      label: '簡體中文',
       key: 'zh-CN'
     },
     {

@@ -10,7 +10,7 @@ export const themeSettings: App.Theme.ThemeSetting = {
   },
   isInfoFollowPrimary: true,
   layout: {
-    mode: 'vertical',
+    mode: 'horizontal',
     scrollMode: 'content'
   },
   page: {
@@ -20,17 +20,17 @@ export const themeSettings: App.Theme.ThemeSetting = {
   header: {
     height: 56,
     breadcrumb: {
-      visible: true,
-      showIcon: true
+      visible: false,
+      showIcon: false
     }
   },
   tab: {
-    visible: true,
-    cache: true,
+    visible: false,
+    cache: false,
     height: 44,
     mode: 'chrome'
   },
-  fixedHeaderAndTab: true,
+  fixedHeaderAndTab: false,
   sider: {
     inverted: false,
     width: 220,
