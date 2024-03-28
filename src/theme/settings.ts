@@ -1,7 +1,7 @@
 /** Default theme settings */
 export const themeSettings: App.Theme.ThemeSetting = {
   themeScheme: 'light',
-  themeColor: '#646cff',
+  themeColor: '#FF822F',
   otherColor: {
     info: '#2080f0',
     success: '#52c41a',
@@ -40,7 +40,7 @@ export const themeSettings: App.Theme.ThemeSetting = {
     mixChildMenuWidth: 200
   },
   footer: {
-    visible: true,
+    visible: false,
     fixed: false,
     height: 48,
     right: true

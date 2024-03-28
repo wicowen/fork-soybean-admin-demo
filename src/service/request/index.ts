@@ -18,7 +18,7 @@ export const request = createFlatRequest<App.Service.Response, InstanceState>(
   {
     baseURL,
     headers: {
-      apifoxToken: 'XL299LiMEDZ0H5h3A29PxwQXdMJqWyY2'
+      // apifoxToken: 'XL299LiMEDZ0H5h3A29PxwQXdMJqWyY2'
     }
   },
   {
@@ -33,11 +33,15 @@ export const request = createFlatRequest<App.Service.Response, InstanceState>(
       return config;
     },
     isBackendSuccess(response) {
+      // console.log('dev: isBackendSuccess', response);
       // when the backend response code is "0000"(default), it means the request is success
       // to change this logic by yourself, you can modify the `VITE_SERVICE_SUCCESS_CODE` in `.env` file
-      return response.data.code === import.meta.env.VITE_SERVICE_SUCCESS_CODE;
+
+      return response.status === 200;
+      // return response.data.code === import.meta.env.VITE_SERVICE_SUCCESS_CODE;
     },
     async onBackendFail(response, instance) {
+      // console.log('dev: onBackendFail', response);
       const authStore = useAuthStore();
 
       function handleLogout() {
@@ -101,13 +105,23 @@ export const request = createFlatRequest<App.Service.Response, InstanceState>(
     onError(error) {
       // when the request is fail, you can show error message
 
+      // let message = error.message;
       let message = error.message;
-      let backendErrorCode = '';
+
+      let backendErrorCode: any = '';
 
       // get backend error message and code
-      if (error.code === BACKEND_ERROR_CODE) {
-        message = error.response?.data?.msg || message;
-        backendErrorCode = error.response?.data?.code || '';
+      // if (error.code === BACKEND_ERROR_CODE) {
+      //   message = error.response?.data?.msg || message;
+      //   backendErrorCode = error.response?.data?.code || '';
+      // }
+      // console.log('dev: onError', error);
+      // console.log('dev: onError', error.response?.detail);
+      // console.log('dev: onError', error.response?.status);
+
+      if (error.response?.status !== 200) {
+        message = error.response?.data?.detail || message;
+        backendErrorCode = error.response?.status || '';
       }
 
       // the error message is displayed in the modal
@@ -122,7 +136,7 @@ export const request = createFlatRequest<App.Service.Response, InstanceState>(
         return;
       }
 
-      window.$message?.error?.(message);
+      window.$message?.warning?.(message);
     }
   }
 );

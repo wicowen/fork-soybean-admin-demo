@@ -230,7 +230,8 @@ declare namespace App {
   namespace I18n {
     type RouteKey = import('@elegant-router/types').RouteKey;
 
-    type LangType = 'en-US' | 'zh-CN' | 'zh-TW';
+    // type LangType = 'en-US' | 'zh-CN' | 'zh-TW';
+    type LangType = 'en-US' | 'zh-TW';
 
     type LangOption = {
       label: string;
@@ -659,8 +660,14 @@ declare namespace App {
       code: string;
       /** The backend service response message */
       msg: string;
+
       /** The backend service response data */
       data: T;
+
+      /** custom: company backend api */
+      status: number;
+      title: string;
+      detail: string;
     };
 
     /** The demo backend service response data */

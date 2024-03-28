@@ -1,6 +1,6 @@
 const local: App.I18n.Schema = {
   system: {
-    title: '序號管理系統'
+    title: 'Demo 管理平台'
   },
   common: {
     action: '操作',
@@ -16,12 +16,12 @@ const local: App.I18n.Schema = {
     confirm: '確認',
     delete: '刪除',
     deleteSuccess: '刪除成功',
-    confirmDelete: '確認刪除？',
+    confirmDelete: '確認刪除?',
     edit: '編輯',
     index: '序號',
     keywordSearch: '請輸入搜尋關鍵字',
     logout: '登出',
-    logoutConfirm: '確認登出？',
+    logoutConfirm: '確認登出?',
     lookForward: '施工中',
     modify: '修改',
     modifySuccess: '修改成功',
@@ -44,10 +44,10 @@ const local: App.I18n.Schema = {
   },
   request: {
     logout: '請求失敗後登出用戶',
-    logoutMsg: '用戶狀態失效，請重新登錄',
+    logoutMsg: '用戶狀態失效, 請重新登入',
     logoutWithModal: '請求失敗後彈出模態框再登出用戶',
-    logoutWithModalMsg: '用戶狀態失效，請重新登錄',
-    refreshToken: '請求的token已過期，刷新token',
+    logoutWithModalMsg: '用戶狀態失效, 請重新登入',
+    refreshToken: '請求的token已過期, 刷新token',
     tokenExpired: 'token已過期'
   },
   theme: {
@@ -127,13 +127,13 @@ const local: App.I18n.Schema = {
     pageFunTitle: '頁面功能',
     configOperation: {
       copyConfig: '複製設定',
-      copySuccessMsg: '複製成功，請替換 src/theme/settings.ts 中的變量 themeSettings',
+      copySuccessMsg: '複製成功, 請替換 src/theme/settings.ts 中的變量 themeSettings',
       resetConfig: '重置設定',
       resetSuccessMsg: '重置成功'
     }
   },
   route: {
-    login: '登錄',
+    login: '登入',
     403: '無權限',
     404: '頁面不存在',
     500: '服務器錯誤',
@@ -169,39 +169,39 @@ const local: App.I18n.Schema = {
   page: {
     login: {
       common: {
-        loginOrRegister: '登錄 / 註冊',
+        loginOrRegister: '登入 / 註冊',
         userNamePlaceholder: '請輸入用戶名',
         phonePlaceholder: '請輸入手機號',
         codePlaceholder: '請輸入驗證碼',
         passwordPlaceholder: '請輸入密碼',
         confirmPasswordPlaceholder: '請再次輸入密碼',
-        codeLogin: '驗證碼登錄',
+        codeLogin: '驗證碼登入',
         confirm: '確定',
         back: '返回',
         validateSuccess: '驗證成功',
-        loginSuccess: '登錄成功',
-        welcomeBack: '歡迎回來，{userName} ！'
+        loginSuccess: '登入成功',
+        welcomeBack: '歡迎回來, {userName}'
       },
       pwdLogin: {
-        title: '密碼登錄',
+        title: '登入',
         rememberMe: '記住我',
-        forgetPassword: '忘記密碼？',
-        register: '註冊賬號',
-        otherAccountLogin: '其他賬號登錄',
-        otherLoginMode: '其他登錄方式',
+        forgetPassword: '忘記密碼',
+        register: '註冊帳號',
+        otherAccountLogin: '其他帳號登入 (For Demo)',
+        otherLoginMode: '其他登入方式',
         superAdmin: '超級管理員',
         admin: '管理員',
         user: '普通用戶'
       },
       codeLogin: {
-        title: '驗證碼登錄',
+        title: '驗證碼登入',
         getCode: '獲取驗證碼',
         reGetCode: '{time}秒後重新獲取',
         sendCodeSuccess: '驗證碼發送成功',
         imageCodePlaceholder: '請輸入圖片驗證碼'
       },
       register: {
-        title: '註冊賬號',
+        title: '註冊帳號',
         agreement: '我已經仔細閱讀並接受',
         protocol: '《用戶協議》',
         policy: '《隱私權政策》'
@@ -215,7 +215,7 @@ const local: App.I18n.Schema = {
     },
     about: {
       title: '關於',
-      introduction: `Soybean Admin 是一個優雅且功能強大的後台管理模板，基於最新的前端技術棧，包括 Vue3, Vite5, TypeScript, Pinia 和 UnoCSS。它內置了豐富的主題設定和組件，代碼規范嚴謹，實現了自動化的文件路由系統。此外，它還采用了基於 ApiFox 的在線Mock數據方案。Soybean Admin 為您提供了一站式的後台管理解決方案，無需額外設定，開箱即用。同樣是一個快速學習前沿技術的最佳實踐。`,
+      introduction: 'Demo Syatem',
       projectInfo: {
         title: '項目信息',
         version: '版本',
@@ -227,8 +227,8 @@ const local: App.I18n.Schema = {
       devDep: '開發依賴'
     },
     home: {
-      greeting: '早安，{userName}, 今天又是充滿活力的一天!',
-      weatherDesc: '今日多雲轉晴，20℃ - 25℃!',
+      greeting: '早安, {userName}',
+      weatherDesc: '今日多雲轉晴, 20℃ - 25℃ !',
       projectCount: '項目數',
       todo: '待辦',
       message: '消息',
@@ -246,10 +246,10 @@ const local: App.I18n.Schema = {
         title: '項目動態',
         moreNews: '更多動態',
         desc1: 'Soybean 在2021年5月28日創建了開源項目 soybean-admin!',
-        desc2: 'Yanbowe 向 soybean-admin 提交了一個bug，多標簽欄不會自適應。',
+        desc2: 'Yanbowe 向 soybean-admin 提交了一個bug, 多標簽欄不會自適應。',
         desc3: 'Soybean 准備為 soybean-admin 的發布做充分的准備工作!',
-        desc4: 'Soybean 正在忙於為soybean-admin寫項目說明文檔！',
-        desc5: 'Soybean 剛才把工作台頁面隨便寫了一些，湊合能看了！'
+        desc4: 'Soybean 正在忙於為soybean-admin寫項目說明文檔',
+        desc5: 'Soybean 剛才把工作台頁面隨便寫了一些, 能看了'
       },
       creativity: '創意'
     },
@@ -279,7 +279,7 @@ const local: App.I18n.Schema = {
         backTab: '返回 function_tab'
       },
       toggleAuth: {
-        toggleAccount: '切換賬號',
+        toggleAccount: '切換帳號',
         authHook: '權限鉤子函數 `hasAuth`',
         superAdminVisible: '超級管理員可見',
         adminVisible: '管理員可見',
@@ -412,7 +412,7 @@ const local: App.I18n.Schema = {
     },
     pwd: {
       required: '請輸入密碼',
-      invalid: '密碼格式不正確，6-18位字符，包含字母、數字、下劃線'
+      invalid: '密碼格式不正確, 6-18位字符, 包含字母、數字、下劃線'
     },
     confirmPwd: {
       required: '請輸入確認密碼',
@@ -438,8 +438,8 @@ const local: App.I18n.Schema = {
     themeConfig: '主題設定',
     themeSchema: '主題模式',
     lang: '切換語言',
-    fullscreen: '全屏',
-    fullscreenExit: '退出全屏',
+    fullscreen: '全畫面',
+    fullscreenExit: '退出全畫面',
     reload: '刷新頁面',
     collapse: '折疊選單',
     expand: '展開選單',

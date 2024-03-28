@@ -70,6 +70,7 @@ function createCommonRequest<ResponseData = any>(
       return Promise.reject(backendError);
     },
     async (error: AxiosError<ResponseData>) => {
+      // console.log('dev: instance.interceptors.response.use', error);
       await opts.onError(error);
 
       return Promise.reject(error);

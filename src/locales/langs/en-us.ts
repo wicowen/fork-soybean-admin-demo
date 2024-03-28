@@ -1,6 +1,6 @@
 const local: App.I18n.Schema = {
   system: {
-    title: 'SoybeanAdmin'
+    title: 'Demo System'
   },
   common: {
     action: 'Action',
@@ -183,11 +183,11 @@ const local: App.I18n.Schema = {
         welcomeBack: 'Welcome back, {userName} !'
       },
       pwdLogin: {
-        title: 'Password Login',
+        title: 'Login',
         rememberMe: 'Remember me',
         forgetPassword: 'Forget password?',
         register: 'Register',
-        otherAccountLogin: 'Other Account Login',
+        otherAccountLogin: 'Other Account Login (For Demo)',
         otherLoginMode: 'Other Login Mode',
         superAdmin: 'Super Admin',
         admin: 'Admin',
@@ -215,7 +215,7 @@ const local: App.I18n.Schema = {
     },
     about: {
       title: 'About',
-      introduction: `Soybean Admin is an elegant and powerful admin template, based on the latest front-end technology stack, including Vue3, Vite5, TypeScript, Pinia and UnoCSS. It has built-in rich theme configuration and components, strict code specifications, and an automated file routing system. In addition, it also uses the online mock data solution based on ApiFox. Soybean Admin provides you with a one-stop admin solution, no additional configuration, and out of the box. It is also a best practice for learning cutting-edge technologies quickly.`,
+      introduction: 'Demo Admin system',
       projectInfo: {
         title: 'Project Info',
         version: 'Version',
@@ -245,11 +245,11 @@ const local: App.I18n.Schema = {
       projectNews: {
         title: 'Project News',
         moreNews: 'More News',
-        desc1: 'Soybean created the open source project soybean-admin on May 28, 2021!',
-        desc2: 'Yanbowe submitted a bug to soybean-admin, the multi-tab bar will not adapt.',
-        desc3: 'Soybean is ready to do sufficient preparation for the release of soybean-admin!',
-        desc4: 'Soybean is busy writing project documentation for soybean-admin!',
-        desc5: 'Soybean just wrote some of the workbench pages casually, and it was enough to see!'
+        desc1: 'user created the open source project user-admin on May 28, 2021',
+        desc2: 'Yanbowe submitted a bug to user-admin, the multi-tab bar will not adapt',
+        desc3: 'user is ready to do sufficient preparation for the release of user-admin',
+        desc4: 'user is busy writing project documentation for user-admin',
+        desc5: 'user just wrote some of the workbench pages casually, and it was enough to see'
       },
       creativity: 'Creativity'
     },
